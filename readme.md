@@ -1,4 +1,5 @@
 # PSMultirunspaces
+[![Build status](https://ci.appveyor.com/api/projects/status/hhwxe3um134fvd82?svg=true)](https://ci.appveyor.com/project/Tadas/psmultirunspaces)
 
 Module facilitates creating separate threads (runspaces) from different script files. It is geared towards PowerShell applications with several threads which are working on different tasks ie. GUI thread and a background worker. It is not intended for running a pool of identical workers.
 
