@@ -7,10 +7,10 @@ The thread scripts will have a `$PSRunspaceContext` hashtable. The members are:
  - **ScriptRoot** - the full path of the script file. Alternative to $PSScriptRoot.
 
 
- ## Usage
- 
- ### In the main thread/script
- ```powershell
+## Usage
+
+### In the main thread/script
+```powershell
 $GUIThread = New-WorkerThread -ThreadScript ".\GUI.ps1" -ScriptParameters @{ Logo = "Logo.jpg" }
 $NetworkClientThread = New-WorkerThread -ThreadScript ".\NetworkClient.ps1" -ScriptParameters @{ ServerIP = "127.0.0.1"; ServerPort = 31337 }
 
@@ -20,11 +20,11 @@ $NetworkClientThread = New-WorkerThread -ThreadScript ".\NetworkClient.ps1" -Scr
 # Cleanup the threads
 Remove-WorkerThread $GUIThread
 Remove-WorkerThread $NetworkClientThread
- ```
+```
  
- ### NetworkClient.ps1
- ```powershell
- Param(
+### NetworkClient.ps1
+```powershell
+Param(
 	[string]$ServerIP,
 	[int]$ServerPort
 )
